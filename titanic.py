@@ -100,8 +100,6 @@ print(rfc.score(X_test,y_test))
 print(classification_report(rfc_y_pred,y_test))
 
 
-# In[15]:
-
 
 #使用梯度提升决策树进行集成O型的训练及预测分析
 from sklearn.ensemble import GradientBoostingClassifier
