@@ -1,19 +1,8 @@
-#coding=utf-8
-import math
-import scipy
 import numpy as np
-from sklearn.feature_selection import VarianceThreshold
+import scipy
+import math
+from scipy import stats
 
-def VarianceThreshold_demo():
-    X = [[0, 0, 1], [0, 1, 0], [1, 0, 0], [0, 1, 1], [0, 1, 0], [0, 1, 1]]
-    sel = VarianceThreshold(threshold=(0.2))
-    y = sel.fit_transform(X)
-    print(y)
-
-
-"""
-Pearson corelation coefficient realization
-"""
 def pearson(vector1, vector2):
     n = len(vector1)
     #simple sums
@@ -46,9 +35,8 @@ def Pearson_demo2():
     a = np.array(a)
     b = np.array(b)
     c = np.array(c)
-    print(scipy .stats.pearsonr(a, b) ) # (1.0,0.0)第一个数代表Pearson相关系数
-    print(scipy .stats.pearsonr(a, c))  # (-1.0,0.0)
-
-if(__name__ == "__main__"):
-    # VarianceThreshold_demo()
+    print(stats.pearsonr(a, b) ) # (1.0,0.0)第一个数代表Pearson相关系数
+    print(stats.pearsonr(a, c))  # (-1.0,0.0)
+if __name__ == "__main__":
     Pearson_demo1()
+    Pearson_demo2()

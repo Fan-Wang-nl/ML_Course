@@ -13,8 +13,8 @@ def PCA_demo():
 
     #iloc is a method to get a specified area of data
     X, y = df_wine.iloc[:, 1:].values, df_wine.iloc[:, 0].values
-    print("X", X)#X is data for features
-    print("y", y)#y is the output
+    print("X (data for features) : ", X)#X is data for features
+    print("y (output) : ", y)#y is the output
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
     sc = StandardScaler()
     X_train_std = sc.fit_transform(X_train)
@@ -151,6 +151,6 @@ def sklearn_PCA_demo3():
     print(data_new)
 
 if __name__ == "__main__":
-    #PCA_demo()
+    PCA_demo()
     #sklearn PCA demo
     sklearn_PCA_demo3()

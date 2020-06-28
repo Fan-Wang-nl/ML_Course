@@ -12,11 +12,13 @@ def demo1():
     ## 决策树
     clf1 = DecisionTreeClassifier(max_depth=None, min_samples_split=2,random_state=0)
     scores1 = cross_val_score(clf1, X, y)
+    #print('scores1: ' + scores1)
     print(scores1.mean())
 
     ## 随机森林
     clf2 = RandomForestClassifier(n_estimators=10, max_depth=None,min_samples_split=2, random_state=0)
     scores2 = cross_val_score(clf2, X, y)
+    #print('scores2: ' + scores2)
     print(scores2.mean())
 
     ## ExtraTree分类器集合
